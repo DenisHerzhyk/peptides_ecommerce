@@ -57,13 +57,11 @@ export default function HomePage() {
                 tools to dose precisely and the transparency to trust every batch.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="rounded-full">
-                  <Link href="/catalog">
-                    Explore catalog <ArrowRight className="size-4" />
-                  </Link>
+                <Button render={<Link href="/catalog" />} size="lg" className="rounded-full">
+                  Explore catalog <ArrowRight className="size-4" />
                 </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-full">
-                  <Link href="/calculator">Peptide calculator</Link>
+                <Button render={<Link href="/calculator" />} size="lg" variant="outline" className="rounded-full">
+                  Peptide calculator
                 </Button>
               </div>
             </div>
@@ -121,10 +119,8 @@ export default function HomePage() {
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Featured peptides</h2>
             <p className="mt-2 text-muted-foreground">Our most requested research compounds.</p>
           </div>
-          <Button asChild variant="ghost" className="hidden shrink-0 rounded-full sm:inline-flex">
-            <Link href="/catalog">
-              View all <ArrowRight className="size-4" />
-            </Link>
+          <Button render={<Link href="/catalog" />} variant="ghost" className="hidden shrink-0 rounded-full sm:inline-flex">
+            View all <ArrowRight className="size-4" />
           </Button>
         </div>
         <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -147,10 +143,8 @@ export default function HomePage() {
                 Pre-built bundles pairing complementary peptides with everything you
                 need to reconstitute — at a lower price than buying separately.
               </p>
-              <Button asChild size="lg" className="mt-6 rounded-full">
-                <Link href="/catalog#bundles">
-                  Shop bundles <ArrowRight className="size-4" />
-                </Link>
+              <Button render={<Link href="/catalog#bundles" />} size="lg" className="mt-6 rounded-full">
+                Shop bundles <ArrowRight className="size-4" />
               </Button>
             </div>
             <div className="grid gap-3 sm:grid-cols-3">

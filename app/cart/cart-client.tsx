@@ -50,8 +50,8 @@ export function CartClient() {
             <Truck className="size-4" /> Ships within 24–48h with tracking
           </p>
         </div>
-        <Button asChild size="lg" className="mt-8 rounded-full">
-          <Link href="/catalog">Continue shopping</Link>
+        <Button render={<Link href="/catalog" />} size="lg" className="mt-8 rounded-full">
+          Continue shopping
         </Button>
       </div>
     )
@@ -65,8 +65,8 @@ export function CartClient() {
         </div>
         <h1 className="mt-6 text-3xl font-black tracking-tight">Your cart is empty</h1>
         <p className="mt-3 text-muted-foreground">Browse our research peptides to get started.</p>
-        <Button asChild size="lg" className="mt-8 rounded-full">
-          <Link href="/catalog">Explore catalog</Link>
+        <Button render={<Link href="/catalog" />} size="lg" className="mt-8 rounded-full">
+          Explore catalog
         </Button>
       </div>
     )

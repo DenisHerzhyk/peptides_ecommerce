@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Instagram, Send, Twitter, Youtube, Mail, MapPin } from 'lucide-react'
+import { AtSign, Send, MessageCircle, Globe, Mail, MapPin } from 'lucide-react'
 
 const cols = [
   {
@@ -33,9 +33,9 @@ const cols = [
 
 const socials = [
   { label: 'Telegram', href: 'https://t.me/', Icon: Send },
-  { label: 'Instagram', href: '#', Icon: Instagram },
-  { label: 'X / Twitter', href: '#', Icon: Twitter },
-  { label: 'YouTube', href: '#', Icon: Youtube },
+  { label: 'Instagram', href: '#', Icon: AtSign },
+  { label: 'Community Chat', href: '#', Icon: MessageCircle },
+  { label: 'Website', href: '#', Icon: Globe },
 ]
 
 export function SiteFooter() {

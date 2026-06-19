@@ -87,8 +87,8 @@ export default function AboutPage() {
             <p className="mx-auto mt-3 max-w-md text-pretty text-muted-foreground">
               Browse lab-verified research peptides and build your stack.
             </p>
-            <Button asChild size="lg" className="mt-6 rounded-full">
-              <Link href="/catalog">Shop peptides</Link>
+            <Button render={<Link href="/catalog" />} size="lg" className="mt-6 rounded-full">
+              Shop peptides
             </Button>
           </div>
         </div>

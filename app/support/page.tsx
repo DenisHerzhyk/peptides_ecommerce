@@ -72,8 +72,8 @@ export default function SupportPage() {
               </span>
               <h3 className="mt-4 text-lg font-bold">{title}</h3>
               <p className="mt-1 flex-1 text-sm leading-relaxed text-muted-foreground">{text}</p>
-              <Button asChild variant="outline" className="mt-4 w-fit rounded-full">
-                <a href={href} target="_blank" rel="noopener noreferrer">{action}</a>
+              <Button render={<a href={href} target="_blank" rel="noopener noreferrer" />} variant="outline" className="mt-4 w-fit rounded-full">
+                {action}
               </Button>
             </div>
           ))}

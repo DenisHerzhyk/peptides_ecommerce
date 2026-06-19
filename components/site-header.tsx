@@ -50,26 +50,22 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <Link href="/login">Login</Link>
+          <Button render={<Link href="/login" />} variant="ghost" size="sm" className="hidden sm:inline-flex">
+            Login
           </Button>
-          <Button asChild size="sm" className="hidden rounded-full sm:inline-flex">
-            <Link href="/register">Register</Link>
+          <Button render={<Link href="/register" />} size="sm" className="hidden rounded-full sm:inline-flex">
+            Register
           </Button>
-          <Button asChild variant="ghost" size="icon" className="sm:hidden" aria-label="Account">
-            <Link href="/login">
-              <User className="size-5" />
-            </Link>
+          <Button render={<Link href="/login" />} variant="ghost" size="icon" className="sm:hidden" aria-label="Account">
+            <User className="size-5" />
           </Button>
-          <Button asChild variant="outline" size="icon" className="relative rounded-full" aria-label="Cart">
-            <Link href="/cart">
-              <ShoppingBag className="size-5" />
-              {count > 0 && (
-                <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">
-                  {count}
-                </span>
-              )}
-            </Link>
+          <Button render={<Link href="/cart" />} variant="outline" size="icon" className="relative rounded-full" aria-label="Cart">
+            <ShoppingBag className="size-5" />
+            {count > 0 && (
+              <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">
+                {count}
+              </span>
+            )}
           </Button>
           <button
             className="ml-1 inline-flex size-9 items-center justify-center rounded-full text-foreground md:hidden"
@@ -95,11 +91,11 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-2 flex gap-2 px-1">
-              <Button asChild variant="outline" className="flex-1 rounded-full">
-                <Link href="/login" onClick={() => setOpen(false)}>Login</Link>
+              <Button render={<Link href="/login" onClick={() => setOpen(false)} />} variant="outline" className="flex-1 rounded-full">
+                Login
               </Button>
-              <Button asChild className="flex-1 rounded-full">
-                <Link href="/register" onClick={() => setOpen(false)}>Register</Link>
+              <Button render={<Link href="/register" onClick={() => setOpen(false)} />} className="flex-1 rounded-full">
+                Register
               </Button>
             </div>
           </nav>
