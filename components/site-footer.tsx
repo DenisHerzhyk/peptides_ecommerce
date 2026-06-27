@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AtSign, Send, MessageCircle, Globe, Mail, MapPin } from 'lucide-react'
+import { Send, MessageCircle, Globe, Mail, MapPin } from 'lucide-react'
 
 const cols = [
   {
@@ -32,10 +32,10 @@ const cols = [
 ]
 
 const socials = [
-  { label: 'Telegram', href: 'https://t.me/', Icon: Send },
-  { label: 'Instagram', href: '#', Icon: AtSign },
-  { label: 'Community Chat', href: '#', Icon: MessageCircle },
-  { label: 'Website', href: '#', Icon: Globe },
+  { label: 'Email', href: 'mailto:hello@genplus.bio', Icon: Mail },
+  { label: 'Telegram', href: 'https://t.me/genplusbio', Icon: Send },
+  { label: 'Community', href: 'https://t.me/genplusbio', Icon: MessageCircle },
+  { label: 'Website', href: 'https://genplus.bio', Icon: Globe },
 ]
 
 export function SiteFooter() {

@@ -49,13 +49,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <Button render={<Link href="/login" />} size="sm" className="hidden rounded-full sm:inline-flex">
+          <Button render={<Link href="/login" />} size="sm" variant="gradient" nativeButton={false} className="hidden rounded-full sm:inline-flex">
             Login
           </Button>
-          <Button render={<Link href="/login" />} variant="ghost" size="icon" className="sm:hidden" aria-label="Login">
+          <Button render={<Link href="/login" />} variant="ghost" size="icon" nativeButton={false} className="sm:hidden" aria-label="Login">
             <User className="size-5" />
           </Button>
-          <Button render={<Link href="/cart" />} variant="outline" size="icon" className="relative rounded-full" aria-label="Cart">
+          <Button render={<Link href="/cart" />} variant="outline" size="icon" nativeButton={false} className="relative rounded-full" aria-label="Cart">
             <ShoppingBag className="size-5" />
             {count > 0 && (
               <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">
@@ -87,7 +87,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="mt-2 px-1">
-              <Button render={<Link href="/login" onClick={() => setOpen(false)} />} className="w-full rounded-full">
+              <Button render={<Link href="/login" onClick={() => setOpen(false)} />} nativeButton={false} className="w-full rounded-full">
                 Login
               </Button>
             </div>

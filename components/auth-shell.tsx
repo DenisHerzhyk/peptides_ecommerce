@@ -18,13 +18,13 @@ export function AuthShell({
       <div className="absolute inset-0 holo-gradient-animated opacity-40" aria-hidden />
       <div className="relative w-full max-w-md">
         <div className="rounded-[2rem] border border-border bg-card/90 p-8 shadow-2xl backdrop-blur-xl">
-          <Link href="/" className="mx-auto block w-44" aria-label="GEN+ home">
+          <Link href="/" className="mx-auto block w-48" aria-label="GEN+ home">
             <Image
-              src="/gen-plus-logo.jpg"
+              src="/logo.jpg"
               alt="GEN+ — Next Genetics. Enhanced."
               width={1280}
               height={853}
-              className="h-auto w-full rounded-xl"
+              className="h-auto w-full"
               priority
             />
           </Link>

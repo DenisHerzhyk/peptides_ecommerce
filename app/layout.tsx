@@ -1,38 +1,37 @@
-import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
-import { Geist, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
-import './globals.css'
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
-import { ChatWidget } from '@/components/chat-widget'
-import { CartProvider } from '@/components/cart-store'
+import type { Metadata, Viewport } from "next";
+import { Geist, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { ChatWidget } from "@/components/chat-widget";
+import { CartProvider } from "@/components/cart-store";
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
-  subsets: ['latin'],
-})
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
 const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
-  subsets: ['latin'],
-})
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: 'GEN+ — Next Genetics. Enhanced.',
+  title: "GEN+ — Next Genetics. Enhanced.",
   description:
-    'GEN+ delivers ultra-high purity synthetic research peptides engineered for the modern researcher. Browse the catalog, build research stacks, and dose precisely with our reconstitution calculator.',
-  generator: 'v0.app',
-}
+    "GEN+ delivers ultra-high purity synthetic research peptides engineered for the modern researcher. Browse the catalog, build research stacks, and dose precisely with our reconstitution calculator.",
+  generator: "v0.app",
+};
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0a1018',
-}
+  colorScheme: "dark",
+  themeColor: "#0a1018",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html
@@ -46,8 +45,7 @@ export default function RootLayout({
           <SiteFooter />
           <ChatWidget />
         </CartProvider>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
-  )
+  );
 }

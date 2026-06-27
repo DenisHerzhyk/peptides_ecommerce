@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ShieldCheck, FlaskConical, Truck, Calculator } from 'lucide-react'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"
 import { Button } from '@/components/ui/button'
 import { ProductCard } from '@/components/product-card'
 import { products, bundles } from '@/lib/products'
@@ -58,10 +65,10 @@ export default function HomePage() {
                 precise, reproducible work.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button render={<Link href="/catalog" />} size="lg" className="btn-gradient rounded-full">
+                <Button render={<Link href="/catalog" />} size="lg" variant="gradient" nativeButton={false} className="rounded-full">
                   Go to catalog <ArrowRight className="size-4" />
                 </Button>
-                <Button render={<Link href="/calculator" />} size="lg" variant="outline" className="rounded-full">
+                <Button render={<Link href="/calculator" />} size="lg" variant="outline" nativeButton={false} className="rounded-full">
                   Technical data
                 </Button>
               </div>
@@ -92,7 +99,7 @@ export default function HomePage() {
       </section>
 
       {/* Company info / features */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto mb-12 max-w-2xl text-center">
           <h2 className="text-3xl font-black tracking-tight sm:text-4xl">The standard of purity</h2>
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
@@ -114,13 +121,13 @@ export default function HomePage() {
       </section>
 
       {/* Featured products */}
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Featured peptides</h2>
             <p className="mt-2 text-muted-foreground">Our most requested research compounds.</p>
           </div>
-          <Button render={<Link href="/catalog" />} variant="ghost" className="hidden shrink-0 rounded-full sm:inline-flex">
+          <Button render={<Link href="/catalog" />} variant="ghost" nativeButton={false} className="hidden shrink-0 rounded-full sm:inline-flex">
             View all <ArrowRight className="size-4" />
           </Button>
         </div>
@@ -132,7 +139,7 @@ export default function HomePage() {
       </section>
 
       {/* Bundles teaser */}
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+      <section className="mx-auto max-w-7xl px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
         <div className="relative overflow-hidden rounded-[2rem] border border-border p-8 sm:p-12">
           <div className="absolute inset-0 holo-gradient opacity-40" aria-hidden />
           <div className="relative grid items-center gap-8 lg:grid-cols-2">
@@ -144,25 +151,46 @@ export default function HomePage() {
                 Pre-built bundles pairing complementary peptides with everything you
                 need to reconstitute — at a lower price than buying separately.
               </p>
-              <Button render={<Link href="/catalog#bundles" />} size="lg" className="mt-6 rounded-full">
+              <Button render={<Link href="/catalog#bundles" />} size="lg" variant="gradient" nativeButton={false} className="mt-6 rounded-full">
                 Shop bundles <ArrowRight className="size-4" />
               </Button>
             </div>
-            <div className="grid gap-3 sm:grid-cols-3">
-              {bundles.map((b) => (
-                <Link
-                  key={b.slug}
-                  href="/catalog#bundles"
-                  className="overflow-hidden rounded-2xl border border-border bg-card"
-                >
-                  <div className="relative aspect-square">
-                    <Image src={b.image} alt={b.name} fill sizes="20vw" className="object-cover" />
-                  </div>
-                  <p className="p-3 text-sm font-semibold">{b.name}</p>
-                </Link>
-              ))}
+            <div className="relative">
+              <Carousel opts={{ align: "start", loop: false }}>
+                <CarouselContent>
+                  {bundles.map((b) => (
+                    <CarouselItem key={b.slug} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                      <Link
+                        href="/catalog#bundles"
+                        className="block overflow-hidden rounded-2xl border border-border bg-card"
+                      >
+                        <div className="relative aspect-square">
+                          <Image src={b.image} alt={b.name} fill sizes="20vw" className="object-cover" />
+                        </div>
+                        <p className="p-3 text-sm font-semibold">{b.name}</p>
+                      </Link>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2 bg-background/80 backdrop-blur-sm" />
+                <CarouselNext className="right-2 bg-background/80 backdrop-blur-sm" />
+              </Carousel>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Research use disclaimer */}
+      <section id="disclaimer" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
+        <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
+          <h2 className="text-lg font-bold">Research use only disclaimer</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            All products sold by GEN+ are intended strictly for in-vitro laboratory
+            research and development purposes only. They are not drugs, foods, or
+            cosmetics, and may not be used as such. They are not intended for human or
+            veterinary use, diagnosis, treatment, or prevention of any disease. By
+            purchasing, you confirm you are a qualified researcher or institution.
+          </p>
         </div>
       </section>
     </>

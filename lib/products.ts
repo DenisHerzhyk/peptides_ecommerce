@@ -201,6 +201,42 @@ export const bundles: Bundle[] = [
     originalPrice: 190,
     image: '/peptide-bundle-glow.png',
   },
+  {
+    slug: 'metabolic-stack',
+    name: 'Metabolic Stack',
+    tagline: 'GLP-1 + Ipamorelin research pair',
+    items: ['GLP-1 (10mg)', 'Ipamorelin (10mg)', 'Bacteriostatic water'],
+    price: 239,
+    originalPrice: 284,
+    image: '/peptide-bundle-recovery.png',
+  },
+  {
+    slug: 'cognitive-stack',
+    name: 'Cognitive Stack',
+    tagline: 'Semax + NAD+ research pair',
+    items: ['Semax (30mg)', 'NAD+ (100mg)', 'Bacteriostatic water'],
+    price: 269,
+    originalPrice: 320,
+    image: '/peptide-bundle-longevity.png',
+  },
+  {
+    slug: 'premium-stack',
+    name: 'Premium Research Kit',
+    tagline: 'Complete BPC + TB + GHK-Cu trio',
+    items: ['BPC-157 (10mg)', 'TB-500 (10mg)', 'GHK-Cu (100mg)', 'Bacteriostatic water (x2)'],
+    price: 349,
+    originalPrice: 410,
+    image: '/peptide-bundle-glow.png',
+  },
+  {
+    slug: 'starter-stack',
+    name: 'Starter Research Stack',
+    tagline: 'GLP-1 + Semax + water bundle',
+    items: ['GLP-1 (5mg)', 'Semax (10mg)', 'Bacteriostatic water'],
+    price: 169,
+    originalPrice: 205,
+    image: '/peptide-bundle-recovery.png',
+  },
 ]
 
 export function getProduct(slug: string) {

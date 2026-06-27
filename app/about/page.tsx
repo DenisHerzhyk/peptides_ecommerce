@@ -27,7 +27,7 @@ export default function AboutPage() {
     <>
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 holo-gradient-animated opacity-50" aria-hidden />
-        <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28">
+        <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-24">
           <h1 className="text-pretty text-5xl font-black tracking-tight sm:text-6xl">
             We make peptides <span className="holo-text">labs trust.</span>
           </h1>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="quality">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20" id="quality">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-xl">
             <Image src="/peptide-hero.png" alt="GEN+ research peptide vials" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
@@ -66,7 +66,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-3xl font-black tracking-tight sm:text-4xl">Our journey</h2>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {timeline.map((t) => (
@@ -79,7 +79,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
         <div className="relative overflow-hidden rounded-[2rem] border border-border p-10 text-center sm:p-16">
           <div className="absolute inset-0 holo-gradient opacity-40" aria-hidden />
           <div className="relative">
@@ -87,10 +87,24 @@ export default function AboutPage() {
             <p className="mx-auto mt-3 max-w-md text-pretty text-muted-foreground">
               Browse lab-verified research peptides and build your stack.
             </p>
-            <Button render={<Link href="/catalog" />} size="lg" className="mt-6 rounded-full">
+            <Button render={<Link href="/catalog" />} size="lg" variant="gradient" nativeButton={false} className="mt-6 rounded-full">
               Shop peptides
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Research use disclaimer */}
+      <section id="disclaimer" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
+        <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
+          <h2 className="text-lg font-bold">Research use only disclaimer</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            All products sold by GEN+ are intended strictly for in-vitro laboratory
+            research and development purposes only. They are not drugs, foods, or
+            cosmetics, and may not be used as such. They are not intended for human or
+            veterinary use, diagnosis, treatment, or prevention of any disease. By
+            purchasing, you confirm you are a qualified researcher or institution.
+          </p>
         </div>
       </section>
     </>

@@ -16,6 +16,14 @@ import {
 import { ProductCard } from '@/components/product-card'
 import { useCart } from '@/components/cart-store'
 import type { Product } from '@/lib/products'
+import { bundles } from '@/lib/products'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"
 
 export function ProductDetail({ product, related }: { product: Product; related: Product[] }) {
   const [dosageIndex, setDosageIndex] = useState(0)
@@ -40,7 +48,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
       <Link href="/catalog" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> Back to catalog
       </Link>
@@ -124,7 +132,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
             <span className="text-3xl font-black">${dosage.price * qty}</span>
           </div>
 
-          <Button onClick={handleAdd} size="lg" className="mt-6 w-full rounded-full sm:w-auto">
+          <Button onClick={handleAdd} size="lg" variant="gradient" className="mt-6 w-full rounded-full sm:w-auto">
             {added ? (
               <>
                 <Check className="size-4" /> Added to cart
@@ -203,6 +211,74 @@ export function ProductDetail({ product, related }: { product: Product; related:
           </div>
         </div>
       )}
+
+      {/* Bundles & stacks containing this product */}
+      <BundlesCarousel product={product} />
+
+      {/* Research use disclaimer */}
+      <section id="disclaimer" className="mx-auto mt-16 max-w-5xl scroll-mt-20">
+        <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
+          <h2 className="text-lg font-bold">Research use only disclaimer</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            All products sold by GEN+ are intended strictly for in-vitro laboratory
+            research and development purposes only. They are not drugs, foods, or
+            cosmetics, and may not be used as such. They are not intended for human or
+            veterinary use, diagnosis, treatment, or prevention of any disease. By
+            purchasing, you confirm you are a qualified researcher or institution.
+          </p>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+function BundlesCarousel({ product }: { product: Product }) {
+  const productBundles = bundles.filter((b) =>
+    b.items.some((item) => item.startsWith(product.name.split(' ')[0])),
+  )
+
+  if (productBundles.length === 0) return null
+
+  return (
+    <div className="mt-16">
+      <h2 className="text-2xl font-black tracking-tight">Bundles &amp; stacks</h2>
+      <p className="mt-1 text-sm text-muted-foreground">
+        {product.name} is featured in these research stacks — save when you bundle.
+      </p>
+      <div className="relative mt-6">
+        <Carousel opts={{ align: "start", loop: false }}>
+          <CarouselContent>
+            {productBundles.map((b) => (
+              <CarouselItem key={b.slug} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                <Link
+                  href="/catalog#bundles"
+                  className="block overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:bg-secondary/50"
+                >
+                  <div className="relative aspect-4/3">
+                    <Image
+                      src={b.image}
+                      alt={b.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="font-bold">{b.name}</p>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{b.tagline}</p>
+                    <p className="mt-2 text-sm">
+                      <span className="font-bold text-foreground">${b.price}</span>{' '}
+                      <span className="text-muted-foreground line-through">${b.originalPrice}</span>
+                    </p>
+                  </div>
+                </Link>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2 bg-background/80 backdrop-blur-sm" />
+          <CarouselNext className="right-2 bg-background/80 backdrop-blur-sm" />
+        </Carousel>
+      </div>
     </div>
   )
 }

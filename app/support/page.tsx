@@ -63,7 +63,7 @@ export default function SupportPage() {
       </section>
 
       {/* Contact channels */}
-      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-5 sm:grid-cols-2">
           {channels.map(({ Icon, title, text, action, href }) => (
             <div key={title} className="flex flex-col rounded-3xl border border-border bg-card p-6">
@@ -72,7 +72,7 @@ export default function SupportPage() {
               </span>
               <h3 className="mt-4 text-lg font-bold">{title}</h3>
               <p className="mt-1 flex-1 text-sm leading-relaxed text-muted-foreground">{text}</p>
-              <Button render={<a href={href} target="_blank" rel="noopener noreferrer" />} variant="outline" className="mt-4 w-fit rounded-full">
+              <Button render={<a href={href} target="_blank" rel="noopener noreferrer" />} variant="outline" nativeButton={false} className="mt-4 w-fit rounded-full">
                 {action}
               </Button>
             </div>
@@ -81,7 +81,7 @@ export default function SupportPage() {
       </section>
 
       {/* Info grid */}
-      <section className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {info.map(({ Icon, title, text }) => (
             <div key={title} className="rounded-3xl border border-border bg-card p-5">
@@ -94,7 +94,7 @@ export default function SupportPage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
         <h2 className="text-center text-3xl font-black tracking-tight sm:text-4xl">Frequently asked questions</h2>
         <Accordion type="single" collapsible className="mt-8">
           {faqs.map((f, i) => (
@@ -112,7 +112,7 @@ export default function SupportPage() {
       </section>
 
       {/* Disclaimer */}
-      <section id="disclaimer" className="mx-auto max-w-5xl scroll-mt-20 px-4 pb-20 sm:px-6 lg:px-8">
+      <section id="disclaimer" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
         <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
           <h2 className="text-lg font-bold">Research use only disclaimer</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

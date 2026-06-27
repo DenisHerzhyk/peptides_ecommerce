@@ -34,7 +34,7 @@ export function CartClient() {
 
   if (step === 'done') {
     return (
-      <div className="mx-auto max-w-2xl px-4 py-20 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-12 pb-20 text-center sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
         <div className="mx-auto flex size-16 items-center justify-center rounded-full holo-gradient">
           <Check className="size-8 text-foreground" />
         </div>
@@ -50,7 +50,7 @@ export function CartClient() {
             <Truck className="size-4" /> Ships within 24–48h with tracking
           </p>
         </div>
-        <Button render={<Link href="/catalog" />} size="lg" className="mt-8 rounded-full">
+        <Button render={<Link href="/catalog" />} size="lg" variant="gradient" nativeButton={false} className="mt-8 rounded-full">
           Continue shopping
         </Button>
       </div>
@@ -59,13 +59,13 @@ export function CartClient() {
 
   if (items.length === 0) {
     return (
-      <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-12 pb-20 text-center sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
         <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-secondary">
           <ShoppingBag className="size-7 text-muted-foreground" />
         </div>
         <h1 className="mt-6 text-3xl font-black tracking-tight">Your cart is empty</h1>
         <p className="mt-3 text-muted-foreground">Browse our research peptides to get started.</p>
-        <Button render={<Link href="/catalog" />} size="lg" className="mt-8 rounded-full">
+        <Button render={<Link href="/catalog" />} size="lg" variant="gradient" nativeButton={false} className="mt-8 rounded-full">
           Explore catalog
         </Button>
       </div>
@@ -73,7 +73,7 @@ export function CartClient() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div className="mx-auto max-w-7xl px-4 py-10 pb-20 sm:px-6 lg:px-8 lg:py-16 lg:pb-28">
       <h1 className="text-3xl font-black tracking-tight sm:text-4xl">
         {step === 'cart' ? 'Your cart' : 'Shipping & payment'}
       </h1>
@@ -188,12 +188,12 @@ export function CartClient() {
           </dl>
 
           {step === 'cart' ? (
-            <Button onClick={() => setStep('ship')} size="lg" className="mt-6 w-full rounded-full">
+            <Button onClick={() => setStep('ship')} size="lg" variant="gradient" className="mt-6 w-full rounded-full">
               Checkout <ArrowRight className="size-4" />
             </Button>
           ) : (
             <>
-              <Button type="submit" form="ship-form" size="lg" className="mt-6 w-full rounded-full">
+              <Button type="submit" form="ship-form" size="lg" variant="gradient" className="mt-6 w-full rounded-full">
                 Place order
               </Button>
               <button onClick={() => setStep('cart')} className="mt-3 w-full text-center text-sm text-muted-foreground hover:text-foreground">
@@ -206,6 +206,19 @@ export function CartClient() {
           </p>
         </aside>
       </div>
+      {/* Research use disclaimer */}
+      <section id="disclaimer" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
+        <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
+          <h2 className="text-lg font-bold">Research use only disclaimer</h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            All products sold by GEN+ are intended strictly for in-vitro laboratory
+            research and development purposes only. They are not drugs, foods, or
+            cosmetics, and may not be used as such. They are not intended for human or
+            veterinary use, diagnosis, treatment, or prevention of any disease. By
+            purchasing, you confirm you are a qualified researcher or institution.
+          </p>
+        </div>
+      </section>
     </div>
   )
 }
