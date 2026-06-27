@@ -5,8 +5,8 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export const metadata = {
-  title: 'Login — HELIXA',
-  description: 'Sign in to your HELIXA research account.',
+  title: 'Login — GEN+',
+  description: 'Sign in to your GEN+ research account.',
 }
 
 export default function LoginPage() {
@@ -16,7 +16,7 @@ export default function LoginPage() {
       subtitle="Sign in to manage your orders and COAs"
       footer={
         <>
-          New to HELIXA?{' '}
+          New to GEN+?{' '}
           <Link href="/register" className="font-semibold text-primary hover:underline">
             Create an account
           </Link>

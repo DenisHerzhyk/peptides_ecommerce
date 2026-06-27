@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 type Msg = { from: 'bot' | 'user'; text: string }
 
-const TELEGRAM_SUPPORT = 'https://t.me/helixa_support'
+const TELEGRAM_SUPPORT = 'https://t.me/genplus_support'
 
 const quickQuestions = [
   'What are research peptides?',
@@ -17,7 +17,7 @@ const quickQuestions = [
 
 const knowledge: Record<string, string> = {
   'what are research peptides':
-    'Research peptides are short chains of amino acids supplied strictly for in-vitro laboratory and research use. All HELIXA products are lyophilized powders intended for research only — not for human or veterinary use.',
+    'Research peptides are short chains of amino acids supplied strictly for in-vitro laboratory and research use. All GEN+ products are lyophilized powders intended for research only — not for human or veterinary use.',
   'how do i reconstitute a peptide':
     'Reconstitution is typically done with bacteriostatic water. Use our Peptide Calculator to get exact volumes for your target dose, vial size, and syringe units.',
   'how is purity tested':
@@ -44,7 +44,7 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Msg[]>([
     {
       from: 'bot',
-      text: "Hi! I'm Helix, the HELIXA assistant. Ask me about peptides, dosing, purity, or shipping.",
+      text: "Hi! I'm the GEN+ assistant. Ask me about peptides, dosing, purity, or shipping.",
     },
   ])
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -76,7 +76,7 @@ export function ChatWidget() {
                   <Sparkles className="size-4" />
                 </span>
                 <div>
-                  <p className="text-sm font-bold leading-tight">Helix Assistant</p>
+                  <p className="text-sm font-bold leading-tight">GEN+ Assistant</p>
                   <p className="text-xs text-foreground/70">Usually replies instantly</p>
                 </div>
               </div>

@@ -5,15 +5,15 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
 export const metadata = {
-  title: 'Register — HELIXA',
-  description: 'Create your HELIXA research account.',
+  title: 'Register — GEN+',
+  description: 'Create your GEN+ research account.',
 }
 
 export default function RegisterPage() {
   return (
     <AuthShell
       title="Create your account"
-      subtitle="Join HELIXA to order and track research peptides"
+      subtitle="Join GEN+ to order and track research peptides"
       footer={
         <>
           Already have an account?{' '}

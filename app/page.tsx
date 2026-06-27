@@ -44,24 +44,25 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-24">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-1.5 text-xs font-semibold backdrop-blur">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
                 <span className="size-2 rounded-full bg-chart-3" />
-                Research use only · Third-party tested
+                Next Genetics. Enhanced.
               </span>
               <h1 className="mt-6 text-pretty text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-                Research peptides,
-                <span className="holo-text"> reimagined.</span>
+                Elevating research through{' '}
+                <span className="holo-text">pure precision.</span>
               </h1>
               <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-                HELIXA delivers premium, lab-verified research peptides with the
-                tools to dose precisely and the transparency to trust every batch.
+                GEN+ engineers ultra-high purity synthetic peptides for the modern
+                researcher — validated by rigorous third-party analysis and built for
+                precise, reproducible work.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button render={<Link href="/catalog" />} size="lg" className="rounded-full">
-                  Explore catalog <ArrowRight className="size-4" />
+                <Button render={<Link href="/catalog" />} size="lg" className="btn-gradient rounded-full">
+                  Go to catalog <ArrowRight className="size-4" />
                 </Button>
                 <Button render={<Link href="/calculator" />} size="lg" variant="outline" className="rounded-full">
-                  Peptide calculator
+                  Technical data
                 </Button>
               </div>
             </div>
@@ -69,7 +70,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-2xl">
                 <Image
                   src="/peptide-hero.png"
-                  alt="Collection of HELIXA research peptide vials on a holographic gradient"
+                  alt="Collection of GEN+ research peptide vials on a holographic gradient"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -93,9 +94,9 @@ export default function HomePage() {
       {/* Company info / features */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Built for serious research</h2>
+          <h2 className="text-3xl font-black tracking-tight sm:text-4xl">The standard of purity</h2>
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-            HELIXA is a research-first peptide company. We pair pharmaceutical-grade
+            GEN+ is a research-first peptide company. We pair pharmaceutical-grade
             sourcing with full batch transparency so labs can work with confidence.
           </p>
         </div>

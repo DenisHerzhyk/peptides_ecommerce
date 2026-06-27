@@ -4,8 +4,8 @@ import { ShieldCheck, FlaskConical, Microscope, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const metadata = {
-  title: 'About — HELIXA',
-  description: 'HELIXA is a research-first peptide company built on purity, transparency and precision.',
+  title: 'About — GEN+',
+  description: 'GEN+ is a research-first peptide company built on purity, transparency and precision.',
 }
 
 const values = [
@@ -16,7 +16,7 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2021', title: 'Founded', text: 'HELIXA started with a simple goal: make research peptides labs can actually trust.' },
+  { year: '2021', title: 'Founded', text: 'GEN+ started with a simple goal: make research peptides labs can actually trust.' },
   { year: '2022', title: 'In-house QA lab', text: 'We built our own analytics lab for independent batch verification.' },
   { year: '2023', title: '40,000 orders', text: 'Crossed 40k research orders shipped across 30+ countries.' },
   { year: '2024', title: 'Precision tools', text: 'Launched our peptide calculator and research dosing toolkit.' },
@@ -32,7 +32,7 @@ export default function AboutPage() {
             We make peptides <span className="holo-text">labs trust.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            HELIXA is a research-first company combining pharmaceutical-grade sourcing
+            GEN+ is a research-first company combining pharmaceutical-grade sourcing
             with complete batch transparency. Our mission is to remove guesswork from
             peptide research — from purity to precise dosing.
           </p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="quality">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-xl">
-            <Image src="/peptide-hero.png" alt="HELIXA research peptide vials" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="/peptide-hero.png" alt="GEN+ research peptide vials" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
           </div>
           <div>
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Quality you can verify</h2>

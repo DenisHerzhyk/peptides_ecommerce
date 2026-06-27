@@ -14,7 +14,7 @@ const cols = [
   {
     title: 'Company',
     links: [
-      { label: 'About HELIXA', href: '/about' },
+      { label: 'About GEN+', href: '/about' },
       { label: 'Quality & Testing', href: '/about#quality' },
       { label: 'Support', href: '/support' },
       { label: 'FAQ', href: '/support#faq' },
@@ -44,17 +44,19 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <span className="size-7 rounded-lg holo-gradient" aria-hidden />
-              <span className="text-lg font-black tracking-tight">HELIXA</span>
+            <Link href="/" className="flex items-center" aria-label="GEN+ home">
+              <span className="holo-text text-2xl font-black italic tracking-tight">GEN+</span>
             </Link>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              Next Genetics. Enhanced.
+            </p>
             <p className="mt-4 max-w-xs text-pretty text-sm leading-relaxed text-muted-foreground">
-              Premium research peptides, third-party tested and shipped worldwide.
-              For laboratory and research use only.
+              Ultra-high purity synthetic research peptides, third-party tested and
+              shipped worldwide. For laboratory and research use only.
             </p>
             <div className="mt-5 flex flex-col gap-2 text-sm text-muted-foreground">
-              <a href="mailto:hello@helixa.bio" className="flex items-center gap-2 hover:text-foreground">
-                <Mail className="size-4" /> hello@helixa.bio
+              <a href="mailto:hello@genplus.bio" className="flex items-center gap-2 hover:text-foreground">
+                <Mail className="size-4" /> hello@genplus.bio
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="size-4" /> Tallinn, Estonia
@@ -83,7 +85,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-6 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} HELIXA Research. All rights reserved.
+            © {new Date().getFullYear()} GEN+ · Next Genetics. For research use only.
           </p>
           <div className="flex items-center gap-2">
             {socials.map(({ label, href, Icon }) => (

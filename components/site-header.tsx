@@ -24,9 +24,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="size-7 rounded-lg holo-gradient" aria-hidden />
-          <span className="text-lg font-black tracking-tight">HELIXA</span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="GEN+ home">
+          <span className="holo-text text-2xl font-black italic tracking-tight">GEN+</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -50,13 +49,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <Button render={<Link href="/login" />} variant="ghost" size="sm" className="hidden sm:inline-flex">
+          <Button render={<Link href="/login" />} size="sm" className="hidden rounded-full sm:inline-flex">
             Login
           </Button>
-          <Button render={<Link href="/register" />} size="sm" className="hidden rounded-full sm:inline-flex">
-            Register
-          </Button>
-          <Button render={<Link href="/login" />} variant="ghost" size="icon" className="sm:hidden" aria-label="Account">
+          <Button render={<Link href="/login" />} variant="ghost" size="icon" className="sm:hidden" aria-label="Login">
             <User className="size-5" />
           </Button>
           <Button render={<Link href="/cart" />} variant="outline" size="icon" className="relative rounded-full" aria-label="Cart">
@@ -90,12 +86,9 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <div className="mt-2 flex gap-2 px-1">
-              <Button render={<Link href="/login" onClick={() => setOpen(false)} />} variant="outline" className="flex-1 rounded-full">
+            <div className="mt-2 px-1">
+              <Button render={<Link href="/login" onClick={() => setOpen(false)} />} className="w-full rounded-full">
                 Login
-              </Button>
-              <Button render={<Link href="/register" onClick={() => setOpen(false)} />} className="flex-1 rounded-full">
-                Register
               </Button>
             </div>
           </nav>

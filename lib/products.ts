@@ -39,7 +39,7 @@ export const categories = [
 
 export const products: Product[] = [
   {
-    slug: 'helixa-glp-1',
+    slug: 'gen-glp-1',
     name: 'GLP-1 Research Peptide',
     category: 'Metabolic',
     tagline: 'Metabolic research compound',

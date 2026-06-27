@@ -1,7 +1,7 @@
 import { CalculatorClient } from './calculator-client'
 
 export const metadata = {
-  title: 'Peptide Calculator — HELIXA',
+  title: 'Peptide Calculator — GEN+',
   description: 'Calculate exact reconstitution volumes and syringe units for your research protocol.',
 }
 

@@ -9,8 +9,8 @@ import {
 } from '@/components/ui/accordion'
 
 export const metadata = {
-  title: 'Support — HELIXA',
-  description: 'Contact HELIXA support, read our FAQ, shipping and research-use information.',
+  title: 'Support — GEN+',
+  description: 'Contact GEN+ support, read our FAQ, shipping and research-use information.',
 }
 
 const channels = [
@@ -19,14 +19,14 @@ const channels = [
     title: 'Telegram support',
     text: 'Fastest way to reach us — typically replies in minutes.',
     action: 'Open Telegram',
-    href: 'https://t.me/helixa_support',
+    href: 'https://t.me/genplus_support',
   },
   {
     Icon: Mail,
     title: 'Email us',
     text: 'For order issues, COAs, and wholesale enquiries.',
-    action: 'hello@helixa.bio',
-    href: 'mailto:hello@helixa.bio',
+    action: 'hello@genplus.bio',
+    href: 'mailto:hello@genplus.bio',
   },
 ]
 
@@ -116,7 +116,7 @@ export default function SupportPage() {
         <div className="rounded-3xl border border-border bg-secondary/50 p-6 sm:p-8">
           <h2 className="text-lg font-bold">Research use only disclaimer</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            All products sold by HELIXA are intended strictly for in-vitro laboratory
+            All products sold by GEN+ are intended strictly for in-vitro laboratory
             research and development purposes only. They are not drugs, foods, or
             cosmetics, and may not be used as such. They are not intended for human or
             veterinary use, diagnosis, treatment, or prevention of any disease. By
