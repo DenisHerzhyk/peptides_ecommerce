@@ -78,7 +78,7 @@ export function CartClient() {
         {step === 'cart' ? 'Your cart' : 'Shipping & payment'}
       </h1>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1.6fr_1fr]">
+      <div className="mt-8 grid gap-8 md:grid-cols-[1.6fr_1fr]">
         <div>
           {step === 'cart' ? (
             <ul className="flex flex-col gap-4">

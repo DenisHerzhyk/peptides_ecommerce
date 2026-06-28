@@ -55,7 +55,7 @@ export default function HomePage() {
                 <span className="size-2 rounded-full bg-chart-3" />
                 Next Genetics. Enhanced.
               </span>
-              <h1 className="mt-6 text-pretty text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+              <h1 className="mt-6 text-pretty text-4xl font-black leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
                 Elevating research through{' '}
                 <span className="holo-text">pure precision.</span>
               </h1>
@@ -74,7 +74,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-2xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-2xl sm:rounded-[2rem]">
                 <Image
                   src="/peptide-hero.png"
                   alt="Collection of GEN+ research peptide vials on a holographic gradient"
@@ -127,7 +127,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Featured peptides</h2>
             <p className="mt-2 text-muted-foreground">Our most requested research compounds.</p>
           </div>
-          <Button render={<Link href="/catalog" />} variant="ghost" nativeButton={false} className="hidden shrink-0 rounded-full sm:inline-flex">
+          <Button render={<Link href="/catalog" />} variant="ghost" nativeButton={false} className="shrink-0 rounded-full">
             View all <ArrowRight className="size-4" />
           </Button>
         </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* Bundles teaser */}
       <section className="mx-auto max-w-7xl px-4 py-12 pb-20 sm:px-6 lg:px-8 lg:py-20 lg:pb-28">
-        <div className="relative overflow-hidden rounded-[2rem] border border-border p-8 sm:p-12">
+        <div className="relative overflow-hidden rounded-[2rem] border border-border p-5 sm:p-8 lg:p-12">
           <div className="absolute inset-0 holo-gradient opacity-40" aria-hidden />
           <div className="relative grid items-center gap-8 lg:grid-cols-2">
             <div>
@@ -155,7 +155,7 @@ export default function HomePage() {
                 Shop bundles <ArrowRight className="size-4" />
               </Button>
             </div>
-            <div className="relative">
+            <div className="relative min-w-0 overflow-hidden">
               <Carousel opts={{ align: "start", loop: false }}>
                 <CarouselContent>
                   {bundles.map((b) => (

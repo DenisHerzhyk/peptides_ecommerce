@@ -74,7 +74,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
         {/* Info */}
         <div>
           <span className="text-sm font-medium text-muted-foreground">{product.category}</span>
-          <h1 className="mt-1 text-pretty text-4xl font-black tracking-tight">{product.name}</h1>
+          <h1 className="mt-1 text-pretty text-3xl font-black tracking-tight sm:text-4xl">{product.name}</h1>
           <div className="mt-3 flex items-center gap-4">
             <span className="flex items-center gap-1 text-sm font-medium">
               <Star className="size-4 fill-chart-4 text-chart-4" />
@@ -143,7 +143,7 @@ export function ProductDetail({ product, related }: { product: Product; related:
           </Button>
 
           {/* Trust row */}
-          <div className="mt-7 grid grid-cols-3 gap-3 border-t border-border pt-6">
+          <div className="mt-7 grid grid-cols-3 gap-2 border-t border-border pt-6 sm:gap-3">
             {[
               { Icon: ShieldCheck, label: 'Batch-tested COA' },
               { Icon: Truck, label: 'Ships in 24h' },
@@ -245,7 +245,7 @@ function BundlesCarousel({ product }: { product: Product }) {
       <p className="mt-1 text-sm text-muted-foreground">
         {product.name} is featured in these research stacks — save when you bundle.
       </p>
-      <div className="relative mt-6">
+      <div className="relative mt-6 min-w-0 overflow-hidden">
         <Carousel opts={{ align: "start", loop: false }}>
           <CarouselContent>
             {productBundles.map((b) => (

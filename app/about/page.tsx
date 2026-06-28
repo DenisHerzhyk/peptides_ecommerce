@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 holo-gradient-animated opacity-50" aria-hidden />
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-24">
-          <h1 className="text-pretty text-5xl font-black tracking-tight sm:text-6xl">
+          <h1 className="text-pretty text-4xl font-black tracking-tight sm:text-6xl">
             We make peptides <span className="holo-text">labs trust.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -40,7 +40,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-20" id="quality">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-border shadow-xl">
             <Image src="/peptide-hero.png" alt="GEN+ research peptide vials" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
           </div>

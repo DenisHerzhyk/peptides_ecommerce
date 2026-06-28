@@ -17,7 +17,7 @@ export function AuthShell({
     <div className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden px-4 py-12">
       <div className="absolute inset-0 holo-gradient-animated opacity-40" aria-hidden />
       <div className="relative w-full max-w-md">
-        <div className="rounded-[2rem] border border-border bg-card/90 p-8 shadow-2xl backdrop-blur-xl">
+        <div className="rounded-[2rem] border border-border bg-card/90 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
           <Link href="/" className="mx-auto block w-48" aria-label="GEN+ home">
             <Image
               src="/logo.jpg"

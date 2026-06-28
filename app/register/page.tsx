@@ -25,7 +25,7 @@ export default function RegisterPage() {
         }
       >
         <form className="flex flex-col gap-4">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div>
               <Label htmlFor="first">First name</Label>
               <Input id="first" required placeholder="Alex" className="mt-1.5" />

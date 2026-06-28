@@ -76,7 +76,7 @@ export function CatalogClient() {
 
         <Carousel
           opts={{ align: "start", loop: false }}
-          className="mt-8 w-full"
+          className="mt-8 w-full overflow-hidden"
         >
           <CarouselContent>
             {bundles.map((b) => (

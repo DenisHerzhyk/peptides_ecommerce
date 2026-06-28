@@ -42,7 +42,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/60 bg-card">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center" aria-label="GEN+ home">
               <span className="holo-text text-2xl font-black italic tracking-tight">GEN+</span>
